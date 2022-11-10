@@ -19,6 +19,11 @@ function generatePassword(){
     return "ERROR: HAS TO BE A NUMBER VALUE BETWEEN 8 AND 128"
   }
 
+  //Asks User If They Want Something in Their Password
+  var wantsLowerCaseLetters = confirm("Would you like lower case letters in your password?");
+  var wantsUpperCaseLetters = confirm("Would you like upper case letters in your password?");
+  var wantsNumbers = confirm("Would you like numbers in your password?");
+  var wantsSpecialCharacters = confirm("Would you like special characters in your password?");
   
 }
 
