@@ -11,6 +11,15 @@ function generatePassword(){
   var specialCharacters = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
   var emptySpace = [];
   
+  // Length and Validation of Password
+  var passwordLength = prompt("How many characters do you want in your password? Choose between 8 and 128 characters");
+  if (passwordLength < 8 || passwordLength > 128) {
+    return "ERROR: PLEASE CHOOSE A NUMBER BETWEEN 8 AND 128 CHARACTERS"
+  } else if(isNaN(passwordLength)) {
+    return "ERROR: HAS TO BE A NUMBER VALUE BETWEEN 8 AND 128"
+  }
+
+  
 }
 
 
