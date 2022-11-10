@@ -9,7 +9,6 @@ function generatePassword(){
   )
   var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   var specialCharacters = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
-  var emptySpace = [];
   
   // Length and Validation of Password
   var passwordLength = prompt("How many characters do you want in your password? Choose between 8 and 128 characters");
@@ -24,6 +23,22 @@ function generatePassword(){
   var wantsUpperCaseLetters = confirm("Would you like upper case letters in your password?");
   var wantsNumbers = confirm("Would you like numbers in your password?");
   var wantsSpecialCharacters = confirm("Would you like special characters in your password?");
+  
+  // Add Selected Charcters to Possible Password Generation
+  var possibleCharactersPool = [];
+  if (wantsLowerCaseLetters){
+    possibleCharactersPool.push(lowerCaseLetters);
+  }
+  if (wantsUpperCaseLetters){
+    possibleCharactersPool.push(upperCaseLetters);
+  }
+  if (wantsNumbers){
+    possibleCharactersPool.push(numbers);
+  }
+  if (wantsSpecialCharacters){
+    possibleCharactersPool.push(specialCharacters);
+  }
+
   
 }
 
